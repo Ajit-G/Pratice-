@@ -5,9 +5,9 @@ pipeline{
       steps{
         checkout(
         [$class: 'GitSCM', 
-        branches: [[name: '*/main']], 
+        branches: [[name: '*/master']], 
         extensions: [], 
-        userRemoteConfigs: [[url: 'https://github.com/Ajit-G/sample-app.git']]
+        userRemoteConfigs: [[url: 'https://github.com/Ajit-G/Pratice-.git']]
         ])
       }
     }
@@ -15,9 +15,9 @@ pipeline{
       steps{
         checkout(
         [$class: 'GitSCM', 
-        branches: [[name: '*/new']], 
+        branches: [[name: '*/testing-branch']], 
         extensions: [], 
-        userRemoteConfigs: [[url: 'https://github.com/Ajit-G/sample-app.git']]
+        userRemoteConfigs: [[url: 'https://github.com/Ajit-G/Pratice-.git']]
         ])
       }
     }
