@@ -1,0 +1,25 @@
+pipeline{
+  agent any
+  stages{
+    stage('git checkout'){
+      steps{
+        checkout(
+        [$class: 'GitSCM', 
+        branches: [[name: '*/main']], 
+        extensions: [], 
+        userRemoteConfigs: [[url: 'https://github.com/Ajit-G/sample-app.git']]
+        ])
+      }
+    }
+    stage('git checkout-new-branch'){
+      steps{
+        checkout(
+        [$class: 'GitSCM', 
+        branches: [[name: '*/new']], 
+        extensions: [], 
+        userRemoteConfigs: [[url: 'https://github.com/Ajit-G/sample-app.git']]
+        ])
+      }
+    }
+  }
+}
