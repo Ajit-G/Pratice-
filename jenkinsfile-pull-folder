@@ -11,11 +11,11 @@ pipeline{
         ])
       }
     }
-    stage('git pull'){
+    /*stage('git pull'){
       steps{
         git branch: 'testing-branch', url: 'https://github.com/Ajit-G/Pratice-.git'
         
       }
-    }
+    }*/
   }
 }
