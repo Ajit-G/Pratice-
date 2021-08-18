@@ -11,14 +11,9 @@ pipeline{
         ])
       }
     }
-    stage('git new checkout'){
+    stage('git pull'){
       steps{
-        checkout(
-        [$class: 'GitSCM', 
-        branches: [[name: '*/testing-branch']], 
-        extensions: [], 
-        userRemoteConfigs: [[url: 'https://github.com/Ajit-G/Pratice-.git']]
-        ])
+        sh 'git pull "https://github.com/Ajit-G/Pratice-/tree/testing-branch/newfolder"'
       }
     }
   }
