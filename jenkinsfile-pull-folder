@@ -3,19 +3,11 @@ pipeline{
   stages{
     stage('git checkout'){
       steps{
-        checkout(
-        [$class: 'GitSCM', 
-        branches: [[name: '*/master']], 
+        checkout([$class: 'GitSCM', 
+        branches: [[name: '*/master'], [
+        name: '*/testing-branch']], 
         extensions: [], 
-        userRemoteConfigs: [[url: 'https://github.com/Ajit-G/Pratice-.git']]
-        ])
+        userRemoteConfigs: [[url: 'https://github.com/Ajit-G/Pratice-.git']]])
       }
-    }
-    stage('git pull'){
-      steps{
-        git branch: 'testing-branch', url: 'https://github.com/Ajit-G/Pratice-.git'
-        
-      }
-    }
   }
 }
