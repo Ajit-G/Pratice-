@@ -11,5 +11,15 @@ pipeline{
         ])
       }
     }
+    stage('git new checkout'){
+      steps{
+        checkout(
+        [$class: 'GitSCM', 
+        branches: [[name: '*/testing-branch']], 
+        extensions: [], 
+        userRemoteConfigs: [[url: 'https://github.com/Ajit-G/Pratice-.git']]
+        ])
+      }
+    }
   }
 }
