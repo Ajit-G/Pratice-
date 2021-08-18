@@ -13,11 +13,11 @@ pipeline{
     }
     stage('git pull'){
       steps{
-        sh **
+        sh ...
         mkdir new'
         cd new/
         git branch: 'testing-branch', url: 'https://github.com/Ajit-G/Pratice-.git'
-        **
+        ...
       }
     }
   }
