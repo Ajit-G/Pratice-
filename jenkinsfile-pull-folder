@@ -13,7 +13,7 @@ pipeline{
     }
     stage('git pull'){
       steps{
-        sh 'git pull "https://github.com/Ajit-G/Pratice-/tree/testing-branch/newfolder"'
+        git branch: 'testing-branch', url: 'https://github.com/Ajit-G/Pratice-.git'
       }
     }
   }
