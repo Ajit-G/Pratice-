@@ -12,7 +12,7 @@ pipeline{
   }
   stage('pull file'){
     steps{
-      sh 'git config pull https://github.com/Ajit-G/Pratice-/blob/4f4db1c9110806bc4dfbd0d1328ad498bffb4efd/newfolder/new'
+      sh 'git config pull "https://github.com/Ajit-G/Pratice-/blob/4f4db1c9110806bc4dfbd0d1328ad498bffb4efd/newfolder/new"'
     }
   }
 }
