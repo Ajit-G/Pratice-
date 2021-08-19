@@ -12,7 +12,7 @@ pipeline{
   }
   stage('pull file'){
     steps{
-      sh 'git pull origin test-branch'
+      sh 'git config pull.ff origin test-branch'
     }
   }
 }
