@@ -12,8 +12,8 @@ pipeline{
   }
   stage('pull file'){
     steps{
-      git fetch origin master:testing-branch
-      git merge testing-branch
+      sh 'git fetch origin master:testing-branch'
+      sh 'git merge testing-branch'
     }
   }
 }
